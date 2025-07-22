@@ -1,5 +1,5 @@
 ﻿using ECAnalytic.Server.Controllers;
-using ECAnalytic.Server.Models;
+using ECAnalytic.Server.Infrastructure.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Pomelo.EntityFrameworkCore.MySql;
@@ -24,6 +24,6 @@ namespace ECAnalytic.Server.Data
 				options => options.EnableRetryOnFailure());
 		}
 
-		public DbSet<Order> Orders { get; set; }
+		public DbSet<OrderDto> Orders { get; set; }
 	}
 }
