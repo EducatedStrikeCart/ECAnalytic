@@ -105,7 +105,7 @@ function generateSyntheticEcommerceData(outputCsv = "synthetic_orders.csv", numR
 
 // Run the script if called directly (e.g., `node generateSyntheticEcommerceData.js`)
 if (require.main === module) {
-  generateSyntheticEcommerceData("synthetic_orders.csv", 100000);
+  generateSyntheticEcommerceData(uuidv4()+".csv", 100000);
 }
 
 // Otherwise, you can export the function for use in other modules:
