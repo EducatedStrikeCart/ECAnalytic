@@ -24,6 +24,6 @@ namespace ECAnalytic.Server.Data
 				options => options.EnableRetryOnFailure());
 		}
 
-		public DbSet<OrderDto> Orders { get; set; }
+		public DbSet<Order> Orders { get; set; }
 	}
 }
