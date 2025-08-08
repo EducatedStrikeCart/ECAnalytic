@@ -24,6 +24,7 @@ namespace ECAnalytic.Server.Data
 				options => options.EnableRetryOnFailure());
 		}
 
-		public DbSet<Order> Orders { get; set; }
+		// virtual needed for testing
+		public virtual DbSet<Order> Orders { get; set; }
 	}
 }

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ECAnalytic.Server.Data.Repositories
 {
-	public abstract class BaseEntityFrameworkRepository<TEntity, TModel, TId> 
+	public abstract class BaseEntityFrameworkRepository<TEntity, TModel, TId>: IBaseEntityFrameworkRepository<TEntity, TModel, TId>
 		where TId : IEquatable<TId>
 		where TEntity : class, ITableObject<TId>
 		where TModel : class, ITableObject<TId>
@@ -37,7 +37,7 @@ namespace ECAnalytic.Server.Data.Repositories
 			await _context.SaveChangesAsync();
 		}
 
-		public async Task<IEnumerable<TModel>> GetAllAsync(int page, int countPerPage)
+		public async Task<IEnumerable<TModel>> GetMultipleAsync(int page, int countPerPage)
 		{
 			return await _context
 							.Set<TEntity>()
@@ -54,7 +54,10 @@ namespace ECAnalytic.Server.Data.Repositories
 			var entity = await _context.FindAsync<TEntity>(id);
 			if (entity == null) return null;
 			var model = _mapper.Map<TModel>(entity);
+			await _context.SaveChangesAsync();
+
 			return model;
+
 		}
 
 		public async Task<TModel?> UpdateAsync(TId id, TModel obj)

@@ -7,7 +7,9 @@ namespace ECAnalytic.Server.Infrastructure.Profiles
 	{
 		public OrderMapperProfile()
 		{
-			CreateMap<Order, OrderDto>().ReverseMap();
+			CreateMap<Order, OrderDto>()
+				.ForMember(dest => dest.Id, opt=>opt.Ignore())
+				.ReverseMap();
 		}
 	}
 }

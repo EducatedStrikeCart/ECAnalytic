@@ -1,5 +1,6 @@
 ﻿using ECAnalytic.Server.Infrastructure.Contracts;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ECAnalytic.Server.Infrastructure.Entities
@@ -19,26 +20,22 @@ namespace ECAnalytic.Server.Infrastructure.Entities
 		public decimal Price { get; set; }
 
 		public decimal TotalAmount { get; set; }
-
+		[Required]
 		public string Country { get; set; }
-
+		[Required]
 		public string City {  get; set; }
 
-		public Order()
+		public Order(Guid id, DateTime orderDate, int userId, int productId, int quantity, decimal price, decimal totalAmount, string country, string city)
 		{
+			Id = id;
+			OrderDate = orderDate;
+			UserId = userId;
+			ProductId = productId;
+			Quantity = quantity;
+			Price = price;
+			TotalAmount = totalAmount;
+			Country = country;
+			City = city;
 		}
-
-		//public Order(Guid id, DateTime orderDate, int userId, int productId, int quantity, decimal price, decimal totalAmount, string country, string city)
-		//{
-		//	Id = id;
-		//	OrderDate = orderDate;
-		//	UserId = userId;
-		//	ProductId = productId;
-		//	Quantity = quantity;
-		//	Price = price;
-		//	TotalAmount = totalAmount;
-		//	Country = country;
-		//	City = city;
-		//}
 	}
 }
