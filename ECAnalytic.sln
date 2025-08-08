@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36203.30 d17.14
+VisualStudioVersion = 17.14.36203.30
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "ecanalytic.client", "ecanalytic.client\ecanalytic.client.esproj", "{F0745503-DB19-E1E1-9575-AED915C69E4D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECAnalytic.Server", "ECAnalytic.Server\ECAnalytic.Server.csproj", "{B01FC715-F10C-4500-9EFC-DA6D005DEE79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ECAnalytic.Server.Tests", "ECAnalytic.Server.Tests\ECAnalytic.Server.Tests.csproj", "{7EE012E6-BAF4-45C7-B410-D1C8F3BC1BEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{B01FC715-F10C-4500-9EFC-DA6D005DEE79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B01FC715-F10C-4500-9EFC-DA6D005DEE79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B01FC715-F10C-4500-9EFC-DA6D005DEE79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EE012E6-BAF4-45C7-B410-D1C8F3BC1BEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EE012E6-BAF4-45C7-B410-D1C8F3BC1BEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EE012E6-BAF4-45C7-B410-D1C8F3BC1BEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EE012E6-BAF4-45C7-B410-D1C8F3BC1BEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
